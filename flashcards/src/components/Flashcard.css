@@ -1,0 +1,51 @@
+* {
+    /* outline: 1px solid red; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cardContainer {
+    color: white;
+    border-radius: 5%;
+}
+
+.question {
+    background-color: rgb(62, 65, 84);
+}
+
+.answer {
+    background-color: rgb(74, 156, 208);
+}
+
+
+
+.cancelSection {
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+
+.cancelButton {
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 8em;
+}
+
+p {
+    font-size: 3em;
+}
