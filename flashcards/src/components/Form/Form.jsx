@@ -24,39 +24,3 @@ export default function Form() {
     </div>
   );
 }
-
-// export default function Form() {
-//     // State for the input fields
-//     const [question, setQuestion] = useState("");
-//     const [answer, setAnswer] = useState("");
-
-//     function handleSubmit() {
-//       // Create the flashcard object
-//       const flashcard = { question, answer };
-
-//       // Pass the flashcard object to the parent component
-//       addFlashcard(flashcard);
-
-//       // Clear the input fields after submitting
-//       setQuestion("");
-//       setAnswer("");
-//     }
-
-//     return (
-//       <div>
-//         <input
-//           className="Question"
-//           placeholder="Question"
-//           value={question}
-//           onChange={(e) => setQuestion(e.target.value)}
-//         />
-//         <input
-//           className="Answer"
-//           placeholder="Answer"
-//           value={answer}
-//           onChange={(e) => setAnswer(e.target.value)}
-//         />
-//         <button onClick={handleSubmit}>Add</button>
-//       </div>
-//     );
-//   }
