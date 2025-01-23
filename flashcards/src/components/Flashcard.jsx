@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Flashcard.css";
 
-function Flashcard() {
+function Flashcard({ answer, question }) {
   //needs to be clickable - let's use <article>
   //should show "front info" at first
   //should show "back info" when clicked
@@ -24,7 +24,7 @@ function Flashcard() {
 
         <div className="cardContent">
           <h2>🤯</h2>
-          <p>JSX means javascript html thing</p>
+          <p>{answer}</p>
         </div>
       </article>
     );
@@ -36,7 +36,7 @@ function Flashcard() {
         </div>
         <div className="cardContent">
           <h2>🤨</h2>
-          <p>What is jsx?</p>
+          <p>{question}</p>
         </div>
       </article>
     );
