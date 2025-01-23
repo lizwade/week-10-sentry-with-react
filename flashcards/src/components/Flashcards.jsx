@@ -1,13 +1,18 @@
 // import { useState } from 'react';
 import Flashcard from "./Flashcard.jsx";
 
-export default function Flashcards() {
+function Flashcards({ data }) {
   return (
-    <>
-      <Flashcard question={"What is JSX?"} answer={"JSX is great"} />
-      <Flashcard question={"What is 2 x 2"} answer={"That's 4"} />
-      <Flashcard question={"What barks?"} answer={"Dog"} />
-      <Flashcard question={"What comes after day?"} answer={"Night!"} />
-    </>
+    <div className="flashcards">
+      {data.map((item, index) => (
+        <Flashcard
+          key={index}
+          question={data[index][0]}
+          answer={data[index][1]}
+        />
+      ))}
+    </div>
   );
 }
+
+export default Flashcards;

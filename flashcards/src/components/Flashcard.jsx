@@ -1,12 +1,7 @@
 import { useState } from "react";
 import "./Flashcard.css";
 
-function Flashcard({ answer, question }) {
-  //needs to be clickable - let's use <article>
-  //should show "front info" at first
-  //should show "back info" when clicked
-  //should have a cross in top right that when clicked closes the card (return it to the list?)
-
+function Flashcard({ question, answer }) {
   const [isClicked, setIsClicked] = useState(false);
 
   function flipCard() {
@@ -16,8 +11,6 @@ function Flashcard({ answer, question }) {
   if (isClicked) {
     return (
       <article className="cardContainer answer" onClick={flipCard}>
-        {/* perhaps here we shouldn't flip card but close it? */}
-
         <div className="cancelSection">
           <button className="cancelButton">❌</button>
         </div>
