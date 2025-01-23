@@ -1,9 +1,9 @@
 // import { useState } from 'react';
-import Flashcard from "./Flashcard.jsx";
+import Flashcard from "../Flashcard.jsx";
 
 function Flashcards({ data }) {
   return (
-    <div className="flashcards">
+    <div className="wrapper">
       {data.map((item, index) => (
         <Flashcard
           key={index}

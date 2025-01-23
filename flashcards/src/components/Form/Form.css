@@ -1,0 +1,11 @@
+form {
+  display: flex; /* Apply Flexbox to the form */
+  gap: 20px; /* Add space between the form elements */
+  align-items: center; /* Ensure all form elements are vertically centered */
+}
+
+input,
+button {
+  padding: 10px; /* Add padding inside the input and button */
+  font-size: 16px; /* Set font size for readability */
+}

@@ -1,0 +1,63 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  /*This class is for the App.jsx container, wrapping over the rest of the components*/
+  outline: 1px solid red;
+  width: 900px;
+}
+
+.header {
+  display: flex;
+  background-color: #222222;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin-top: 300px;
+}
+
+.logo {
+  /*This makes sure the img has a fixed size*/
+  max-height: 100px;
+}
+
+.formBox {
+  background-color: #232731;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.wrapper {
+  /* This class is for the div created dynamically wrapping over all of our cards*/
+  background-color: #232731;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  width: calc(
+    33.33% - 10px
+  ); /* Ensures 3 items per row with some gap it is replacing the shorthand flex, if necessary we can reimplement*/
+  margin: 5px;
+  box-sizing: border-box;
+  height: 300px;
+  overflow: hidden; /* Prevents content from overflowing */
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: #222222;
+  color: white;
+}

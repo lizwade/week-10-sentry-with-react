@@ -1,7 +1,9 @@
 import "./App.css";
 import { useState } from "react";
-import Flashcards from "./components/Flashcards.jsx";
+import Flashcards from "./components/Flashcard/Flashcards/Flashcards.jsx";
 import Form from "./components/Form/Form.jsx";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [qAndA, setQAndA] = useState([
@@ -27,10 +29,12 @@ function App() {
   //console.log(qAndA[0][1]);
 
   return (
-    <>
+    <div className="main-content">
+      <Header />
       <Form />
       <Flashcards data={qAndA} />
-    </>
+      <Footer />
+    </div>
   );
 }
 

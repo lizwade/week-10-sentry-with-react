@@ -15,7 +15,7 @@ export default function Form() {
   }
 
   return (
-    <div>
+    <div className="formBox">
       <form method="post" onSubmit={handleSubmit}>
         <input name="question" defaultValue="Question"></input>
         <input name="answer" defaultValue="Answer"></input>
