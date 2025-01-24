@@ -56,8 +56,3 @@ article {
   display: flex;
   flex-direction: column;
 }
-
-.footer {
-  background-color: #222222;
-  color: white;
-}
