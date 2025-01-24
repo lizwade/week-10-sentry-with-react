@@ -5,11 +5,12 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #232731;
 }
 
 .main-content {
   /*This class is for the App.jsx container, wrapping over the rest of the components*/
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   width: 900px;
 }
 
