@@ -25,16 +25,20 @@ function App() {
     ],
   ]);
 
-  // Function to add a new flashcard 
+  // Function to add a new flashcard updated the useStateabove with data that is passed into it from the form 
   const addFlashcard = (question, answer) => {
     setQAndA((prevQAndA) => [...prevQAndA, [question, answer]]);
+  };
+  //Atempt to make a delete function 
+  const deleteFlashcard = (index) => {
+    setQAndA((prevQAndA) => prevQAndA.filter((_, i) => i !== index));
   };
 
   return (
     <div className="main-content">
       <Header />
       <Form onAddFlashcard={addFlashcard} />
-      <Flashcards data={qAndA} />
+      <Flashcards data={qAndA} onDeleteFlashcard={deleteFlashcard} />
       <Footer />
     </div>
   );

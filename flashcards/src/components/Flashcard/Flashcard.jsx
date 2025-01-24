@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Flashcard.css";
 
-function Flashcard({ question, answer }) {
+function Flashcard({ question, answer, onDelete  }) {
   const [isClicked, setIsClicked] = useState(false);
 
   function flipCard() {
@@ -14,7 +14,10 @@ function Flashcard({ question, answer }) {
       // I think we can condense these to one instead of fliping between two different sets of code...Food for thought!
       <article className="cardContainer answer" onClick={flipCard}>
         <div className="cancelSection">
-          <button className="cancelButton">❌</button>
+          <button className="cancelButton" onClick={(e) => {
+            e.stopPropagation(); // Stops card flipping when clicking the delete button
+            onDelete();
+          }}>❌</button>
         </div>
 
         <div className="cardContent">
@@ -27,7 +30,10 @@ function Flashcard({ question, answer }) {
     return (
       <article className="cardContainer question" onClick={flipCard}>
         <div className="cancelSection">
-          <button className="cancelButton">❌</button>
+          <button className="cancelButton"onClick={(e) => {
+            e.stopPropagation(); // Prevent card flipping when clicking the delete button
+            onDelete();
+          }}>❌</button>
         </div>
         <div className="cardContent">
           <h2>🤨</h2>
