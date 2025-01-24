@@ -1,0 +1,19 @@
+.logo {
+    width: 100px; 
+    height: 100px;
+  }
+  
+/* allows the react logo to spin */
+  .spin {
+    animation: spin 8s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
