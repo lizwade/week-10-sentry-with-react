@@ -10,6 +10,8 @@ function Flashcard({ question, answer }) {
 
   if (isClicked) {
     return (
+
+      // I think we can condense these to one instead of fliping between two different sets of code...Food for thought!
       <article className="cardContainer answer" onClick={flipCard}>
         <div className="cancelSection">
           <button className="cancelButton">❌</button>

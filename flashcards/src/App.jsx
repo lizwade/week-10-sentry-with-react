@@ -12,7 +12,7 @@ function App() {
       "props",
     ],
     [
-      "Why should you use state insted of local variables for values we want to display in components?",
+      "Why should you use state instead of local variables for values we want to display in components?",
       "Because otherwise React can't keep track of its value and won't re-render to change what's displayed.",
     ],
     [
@@ -25,13 +25,15 @@ function App() {
     ],
   ]);
 
-  // first square brackets specify which qAndA. Second specify Question [0] or Answer [1]
-  //console.log(qAndA[0][1]);
+  // Function to add a new flashcard 
+  const addFlashcard = (question, answer) => {
+    setQAndA((prevQAndA) => [...prevQAndA, [question, answer]]);
+  };
 
   return (
     <div className="main-content">
       <Header />
-      <Form />
+      <Form onAddFlashcard={addFlashcard} />
       <Flashcards data={qAndA} />
       <Footer />
     </div>

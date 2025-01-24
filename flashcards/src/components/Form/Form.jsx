@@ -1,24 +1,38 @@
 import { useState } from "react";
 
-export default function Form() {
-  // We want to take the input of Question and Answer and store it in an object
-  // We click an Add button and sends that object down to Flashcards
-
-  const [question, setQuestion] = useState(["Test 1"]);
-  const [answer, setAnswer] = useState("Test 2");
+export default function Form({ onAddFlashcard }) {
+  const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    console.log("Example", form, formData.entries());
+
+    if (!question.trim() || !answer.trim()) return;
+
+    // Call the function passed from parent to add the flashcard
+    onAddFlashcard(question, answer);
+
+    // resets the inputs after submiting. 
+    setQuestion("");
+    setAnswer("");
   }
 
   return (
     <div className="formBox">
-      <form method="post" onSubmit={handleSubmit}>
-        <input name="question" defaultValue="Question"></input>
-        <input name="answer" defaultValue="Answer"></input>
+      <form onSubmit={handleSubmit}>
+        <input
+          name="question"
+          //Input data goes to the question useState
+          value={question}
+          onChange={(e) => setQuestion(e.target.value)}
+          placeholder="Enter question"
+        />
+        <input
+          name="answer"
+          value={answer}
+          onChange={(e) => setAnswer(e.target.value)}
+          placeholder="Enter answer"
+        />
         <button type="submit">Add</button>
       </form>
     </div>
